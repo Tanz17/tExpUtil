@@ -1,0 +1,9 @@
+name: tExpUtil
+version: '${project.version}'
+main: ru.tanz.ExpPlugin
+authors: [ Tanz ]
+commands:
+  texpbottle:
+    aliases:
+      - exp
+      - expbottle
