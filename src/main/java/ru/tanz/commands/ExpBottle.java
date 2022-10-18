@@ -43,14 +43,15 @@ public class ExpBottle implements CommandExecutor {
             ExpPlugin.getInstance().fillList();
             return true;
         }
-        int level = Integer.parseInt(args[0]);
+        
 
         Player target = ((Player) sender).getPlayer();
 
-        if(!ExpPlugin.getInstance().getLevelList().contains(level)){
+        if(!ExpPlugin.getInstance().getLevelList().contains(Integer.parseInt(args[0]))){
             sender.sendMessage(OtherUtil
                     .color(ExpPlugin.getInstance().getConfig().getString("messages.exist-exp")));
         } else{
+            int level = Integer.parseInt(args[0]);
             String name = OtherUtil
                     .color(ExpPlugin.getInstance().getConfig().getString("exp-bottle-settings.name"));
 
