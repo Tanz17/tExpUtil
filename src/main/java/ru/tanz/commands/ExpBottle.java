@@ -18,7 +18,7 @@ public class ExpBottle implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(args.length < 1){
+        if(args.length < 1 || args.length > 1){
             sender.sendMessage(OtherUtil
                     .color(ExpPlugin.getInstance().getConfig().getString("messages.help")));
             return true;
